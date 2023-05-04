@@ -343,33 +343,33 @@ label d4bedroom:
 
         "BUZZ BUZZ"
 
-        "It’s a text from Annie!"
+        "It's a text from Annie!"
 
-        a "Hey, are you free now to hop on a call to finish Tyler’s part of the presentation?"
+        a "Hey, are you free now to hop on a call to finish Tyler's part of the presentation?"
 
-        me "Yeah, I’m really discouraged that we got stuck with doing his work."
+        me "Yeah, I'm really discouraged that we got stuck with doing his work."
 
-        me "It’s so unfair and it makes me so frustrated."
+        me "It's so unfair and it makes me so frustrated."
 
         a "Yeah, it truly does suck that we have to be in this position."
 
-        a "I understand that we are both very angry and frustrated with the situation, but let’s just try to get what we can do to the best of our abilities!"
+        a "I understand that we are both very angry and frustrated with the situation, but let's just try to get what we can do to the best of our abilities!"
 
-        me "I agree, I’m going to take some deep breaths. Thanks for always letting me process my emotions through you."
+        me "I agree, I'm going to take some deep breaths. Thanks for always letting me process my emotions through you."
 
         "You take some deep breaths."
 
-        me "Ok, I’m ready to get on a video call now."
+        me "Ok, I'm ready to get on a video call now."
 
         scene computer with pixellate
 
-        "You and Annie go into a video call to prepare for the presentation and finish Tyler’s portion of the presentation."
+        "You and Annie go into a video call to prepare for the presentation and finish Tyler's portion of the presentation."
 
         "You and Annie work diligently on the project for the rest of the day, but it's clear that Tyler isn't putting in any effort."
 
         "You can't help but feel frustrated."
 
-        "Let’s just hope the presentation goes well tomorrow…"
+        "Let's just hope the presentation goes well tomorrow..."
 
         "You finish up, say your goodnights, then go to bed."
 

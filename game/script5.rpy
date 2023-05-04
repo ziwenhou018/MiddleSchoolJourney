@@ -4,15 +4,15 @@ label d5classroom:
 
     play music classroom
 
-    "It’s the day for the presentation!"
+    "It's the day for the presentation!"
 
     show teacher neutral with dissolve15
 
-    t "Class! It’s time for the presentation now!"
+    t "Class! It's time for the presentation now!"
 
     show teacher happy
 
-    t "I can’t wait to hear your wonderful presentations."
+    t "I can't wait to hear your wonderful presentations."
 
     show teacher explain
 
@@ -27,11 +27,11 @@ label d5classroom:
 
     h "And so, as you can see, Franklin's leadership during the Great Depression and World War II had a profound impact on our country's history."
 
-    "As you watch Harold’s presentation about Franklin D. Roosevelt, you’re really impressed by how thorough the research is and how confidently he presents the points in each slide."
+    "As you watch Harold's presentation about Franklin D. Roosevelt, you're really impressed by how thorough the research is and how confidently he presents the points in each slide."
 
-    "Strangely enough, none of Harold’s other groupmates seem to be taking turns in helping him present."
+    "Strangely enough, none of Harold's other groupmates seem to be taking turns in helping him present."
 
-    "For a moment, you wonder what it would have been like if Harold joined you and Annie’s group instead..."
+    "For a moment, you wonder what it would have been like if Harold joined you and Annie's group instead..."
 
     "Harold and his group finished their presentation to a smattering of polite applause."
 
@@ -51,14 +51,14 @@ label d5classroom:
 
     "You and Annie exchange nervous glances before beginning your presentation."
 
-    n "Oh! Now it’s our turn!"
+    n "Oh! Now it's our turn!"
 
     show annie embarrassed at slightleft
     show tyler hehe at slightright with dissolve15
 
-    "Ahh! You feel very nervous even though you’ve practiced multiple times."
+    "Ahh! You feel very nervous even though you've practiced multiple times."
 
-    "You take a deep breath, and hope that you don’t stutter on your words."
+    "You take a deep breath, and hope that you don't stutter on your words."
 
     show annie happy
     show tyler smile
@@ -86,11 +86,11 @@ label d5classroom:
         show annie embarrassed
         show tyler hehe
 
-        "Next, is Tyler’s turn to present Section C."
+        "Next, is Tyler's turn to present Section C."
 
         "You hold your breath for a moment as he presents."
 
-        "It’s not terrible, at the very least he remembered what he was supposed to say, but it’s not like Harold’s either."
+        "It's not terrible, at the very least he remembered what he was supposed to say, but it's not like Harold's either."
 
         "Perhaps even Tyler did not want to look bad in front of everyone else."
 
@@ -121,11 +121,11 @@ label d5classroom:
 
             show teacher embarrassed
 
-            t "I can tell that the distribution of work was… uneven."
+            t "I can tell that the distribution of work was... uneven."
 
-            me "I’m sooo sorry for this, Dr. Shah. I was just thinking that it would probably be more effective if I could just finish this on my own."
+            me "I'm sooo sorry for this, Dr. Shah. I was just thinking that it would probably be more effective if I could just finish this on my own."
 
-            me "Also, our group didn’t have much time left, but there were still so many things that haven’t been done…"
+            me "Also, our group didn't have much time left, but there were still so many things that haven't been done..."
 
             me "In fact, Annie also helped me with this. But definitely we'll make sure to do better in teamwork next time."
 
@@ -143,7 +143,7 @@ label d5classroom:
 
             show tyler hehe
 
-            "You glanced at Tyler, he definitely also heard Dr. Shah’s comments."
+            "You glanced at Tyler, he definitely also heard Dr. Shah's comments."
 
             t "And Tyler, I know you struggled with your part of the project, but I have faith that you'll improve with more practice."
 
@@ -159,7 +159,7 @@ label d5classroom:
 
             "Regardless of what everyone else thinks, the presentation is finally finished."
 
-            n "It’s finally finished!!"
+            n "It's finally finished!!"
 
             n "I had been worried sick!!!! But fortunately Tyler successfully completed his part for the presentation."
 
@@ -167,13 +167,13 @@ label d5classroom:
             show annie happy
             show tyler happy
 
-            t "Good job group! I love how you analyze the President’s motivation for making the reform."
+            t "Good job group! I love how you analyze the President's motivation for making the reform."
 
             show annie neutral
             show tyler smile
             show teacher neutral
 
-            t "However, I have to say that I think it could have done better in presenting the president’s reform policy."
+            t "However, I have to say that I think it could have done better in presenting the president's reform policy."
 
             show teacher happy
 
@@ -272,7 +272,7 @@ label d5classroom:
 
         "Annie goes first presenting Section A on [president]."
     
-        n "Ok not bad Annie. You said a couple of things that sounded funny but that’s alright."
+        n "Ok not bad Annie. You said a couple of things that sounded funny but that's alright."
 
         "You go next, presenting Section B. You started off a little shaky, but you ended up pulling through till the end."
 
@@ -293,11 +293,11 @@ label d5classroom:
         show annie embarrassed
         show tyler hehe
 
-        "Next, is Tyler’s turn to present Section C."
+        "Next, is Tyler's turn to present Section C."
 
         "You hold your breath for a moment as he presents."
 
-        "Wait, was he supposed to say that? You realize that he’s trying his best to say what he was supposed to say but it didn’t quite sound like what you all rehearsed."
+        "Wait, was he supposed to say that? You realize that he's trying his best to say what he was supposed to say but it didn't quite sound like what you all rehearsed."
 
         "Now you feel really embarrassed. Even Harold is judging you."
 
@@ -308,7 +308,6 @@ label d5classroom:
 
         "But regardless of what everyone else thinks, the presentation is finally finished."
 
-        # TODO
         show teacher sad at right with moveinright
 
         t "I'm sorry to say that I'm not very impressed with your presentation, group."
@@ -341,7 +340,7 @@ label d5classroom:
 
             show teacher explain
 
-            t "However, as much as I think your presentation could be improved, I’m glad to see how you all worked together to make sure you had finished it."
+            t "However, as much as I think your presentation could be improved, I'm glad to see how you all worked together to make sure you had finished it."
 
             t "While being accurate in your facts is one thing, being able to work as a team is another thing. The latter is what will get you far in life."
 
@@ -398,7 +397,7 @@ label d5classroom:
         show annie neutral at slightleft
         show tyler neutral at slightright with dissolve15
 
-        t "[name] and Annie…"
+        t "[name] and Annie..."
         
         show tyler kindasad
 
@@ -416,17 +415,17 @@ label d5classroom:
 
         show annie surprised
 
-        a "Oh! Uhh you’re welcome."
+        a "Oh! Uhh you're welcome."
 
         show annie embarrassed
 
-        a "Yeah it’s not like we doubted you or anything ahahah..."
+        a "Yeah it's not like we doubted you or anything ahahah..."
 
         me "Yeah, no problem man. Just let us know if you need anything! See you tomorrow!"
 
         scene outside with dissolve15
 
-        "As you begin to leave the school, you see your mom’s car pull up to the pickup zone."
+        "As you begin to leave the school, you see your mom's car pull up to the pickup zone."
 
         "You smile to yourself."
 
@@ -448,7 +447,7 @@ label d5classroom:
 
         scene outside with dissolve15
 
-        "After school, as you begin to leave the school, you see your mom’s car pull up to the pickup zone."
+        "After school, as you begin to leave the school, you see your mom's car pull up to the pickup zone."
 
         if projectPoints >= 4:
 
@@ -456,7 +455,7 @@ label d5classroom:
 
             "Your presentation went well."
 
-            "However, Tyler didn’t look like a happy camper."
+            "However, Tyler didn't look like a happy camper."
 
             "You wonder if things would have turned out differently if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group instead."
 
@@ -464,7 +463,7 @@ label d5classroom:
 
             "You are feeling a little dejected."
 
-            "Your presentation didn’t go as well as you had hoped, and Tyler seems to dislike you."
+            "Your presentation didn't go as well as you had hoped, and Tyler seems to dislike you."
 
             "You wonder if things would have turned out differently if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group instead."
 
@@ -476,13 +475,13 @@ label d5classroom:
 
         n "Oh no."
 
-        "They’re coming your way."
+        "They're coming your way."
 
-        "You try to maneuver so you dodge them but you’re too slow and one of them collides with you, sending you sprawling to the ground."
+        "You try to maneuver so you dodge them but you're too slow and one of them collides with you, sending you sprawling to the ground."
 
-        "You’re okay, though you have some scrapes on your hand."
+        "You're okay, though you have some scrapes on your hand."
 
-        "However, you realize that your backpack wasn’t zipped all the way and all of its contents spilled out onto the concrete."
+        "However, you realize that your backpack wasn't zipped all the way and all of its contents spilled out onto the concrete."
 
         "The two students run off to continue chasing each other, not even apologizing to you."
 

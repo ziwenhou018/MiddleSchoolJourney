@@ -264,7 +264,17 @@ label d3classroom:
 
                 me "What you have seems to be great so far! I'm noticing here that you wrote that [president] was the 10th president..."
 
-                me "... but he was actually the [presidentNum] president."
+                if nightAction1 == "research":
+
+                    me "... but I found that he was the [presidentNum] president."
+                
+                else:
+
+                    show annie think
+
+                    a "Yea, I don't think that's what we learned from History class..."
+
+                    show annie neutral
 
                 me "Also, you wrote about [president]'s legacy, but some more details would be helpful."
 
@@ -363,7 +373,6 @@ label d3lunch:
 
     "Suddenly, you spot Tyler sitting alone at a table, his head buried in his arms."
 
-    # TODO
     show tyler sadb2
 
     "Tyler..."
@@ -412,7 +421,7 @@ label d3lunch:
 
                 b "So why are you here? What do you want to know about me? Are you here to laugh at me?"
 
-                me "No… I just wanted to see-"
+                me "No... I just wanted to see-"
 
                 show tyler kindasadb2
 
@@ -448,7 +457,7 @@ label d3lunch:
 
                 show tyler embarrassedb2
 
-                b "uh…"
+                b "uh..."
 
                 me "After all, we are group mates. I also want to make sure you are fine now."
                 
@@ -462,7 +471,7 @@ label d3lunch:
 
                 show tyler heheb2
 
-                b "Thanks, but don’t worry about it."
+                b "Thanks, but don't worry about it."
                 
                 show tyler smileb2
 
@@ -492,7 +501,7 @@ label d3lunch:
 
                 show tyler embarrassedb2
 
-                b "uh…"
+                b "uh..."
 
                 me "After all, we are group mates. I also want to make sure you are fine now."
                 
@@ -502,9 +511,9 @@ label d3lunch:
 
                 b "..."
 
-                b "I never planned to tell this to anybody…"
+                b "I never planned to tell this to anybody..."
 
-                b "…but since you asked and are nice to me…"
+                b "...but since you asked and are nice to me..."
 
                 b "It was my Dad. He has a drinking problem."
 
@@ -512,15 +521,15 @@ label d3lunch:
 
                 b "Last night he came home drunk and began to shout at my mum and me. I was so scared so I ran to my bedroom and locked my room."
 
-                b "But, my mom… He kept hitting my mom."
+                b "But, my mom... He kept hitting my mom."
 
-                n "Woah! Tyler’s Dad hit his mom!? Is this the first time or has this been happening for a long time?"
+                n "Woah! Tyler's Dad hit his mom!? Is this the first time or has this been happening for a long time?"
 
                 show tyler kindasadb2
 
                 b "This is also where my bruise came from. Not from a fight with the other kids. But from my Dad."
 
-                me "Tyler… I’m so sorry to hear this. You must have suffered a lot."
+                me "Tyler... I'm so sorry to hear this. You must have suffered a lot."
 
                 me "It's not your responsibility to fix everything. You should definitely tell someone, like a teacher or counselor. They can help you and your family."
 
@@ -534,7 +543,7 @@ label d3lunch:
 
                 show tyler happyb2
 
-                b "I appreciate this. Really. After all the crap I’ve pulled, you still want to do this for me."
+                b "I appreciate this. Really. After all the crap I've pulled, you still want to do this for me."
                 
                 show tyler smileb2
 
@@ -562,53 +571,53 @@ label d3bedroom:
 
     if not tylerWillDoWork:
 
-        "How are you feeling about the fact that Tyler didn’t do work?"
+        "How are you feeling about the fact that Tyler didn't do work?"
 
         menu:
 
-            "How are you feeling about the fact that Tyler didn’t do work?"
+            "How are you feeling about the fact that Tyler didn't do work?"
 
             "Worried":
 
                 n "What is going to happen for the presentation?"
 
-                n "Tyler hasn’t done enough research, so how will we be able to have enough information to present?"
+                n "Tyler hasn't done enough research, so how will we be able to have enough information to present?"
 
             "Indifferent":
 
-                n "I mean, ultimately it’s Tyler’s own fault for not doing his research."
+                n "I mean, ultimately it's Tyler's own fault for not doing his research."
 
-                n "I guess there’s nothing we can really do about it at this point. I’ll just take whatever grade Dr. Shah gives us ..."
+                n "I guess there's nothing we can really do about it at this point. I'll just take whatever grade Dr. Shah gives us ..."
 
             "Angry":
 
                 n "Why does he keep thinking he can get away with not doing his work?!"
 
-                n "It’s so frustrating that we have to carry his load."
+                n "It's so frustrating that we have to carry his load."
         
     else:
 
-        "You think back to class today and how Tyler did his work today. How are you feeling based on today’s class?"
+        "You think back to class today and how Tyler did his work today. How are you feeling based on today's class?"
 
         menu:
 
-            "How are you feeling based on today’s class?"
+            "How are you feeling based on today's class?"
 
             "Indifferent":
 
-                n "I mean… he’s just doing the bare minimum."
+                n "I mean... he's just doing the bare minimum."
 
-                n "There’s not really much to congratulate him on when Annie and I have been doing the same thing."
+                n "There's not really much to congratulate him on when Annie and I have been doing the same thing."
 
             "Happy":
 
-                n "It’s so great to see Tyler participating in our group project!"
+                n "It's so great to see Tyler participating in our group project!"
 
-                n "I’m happy to see his progress in this project even if it’s just a little bit."
+                n "I'm happy to see his progress in this project even if it's just a little bit."
 
             "Suspicious":
 
-                n "I wonder what made him actually do his work…"
+                n "I wonder what made him actually do his work..."
 
                 n "Does this mean he will actually be a helpful team member?"
 
@@ -616,7 +625,7 @@ label d3bedroom:
 
     if not tylerStory:
 
-        "Although you didn’t talk much to him, you can’t help but have a few thoughts."
+        "Although you didn't talk much to him, you can't help but have a few thoughts."
 
         "What are you thinking about after seeing Tyler like that?"
 
@@ -626,9 +635,9 @@ label d3bedroom:
 
             "Worried":
 
-                n "I wonder why he was crying like that… he looked so sad…"
+                n "I wonder why he was crying like that... he looked so sad..."
 
-                n "Should I have talked more with Tyler? I hope he is ok…"
+                n "Should I have talked more with Tyler? I hope he is ok..."
 
             "Surprised":
 
@@ -638,13 +647,13 @@ label d3bedroom:
 
             "Satisfied":
 
-                n "It was oddly relieving seeing Tyler like that…"
+                n "It was oddly relieving seeing Tyler like that..."
 
-                n "Serves him right since he’s always being mean to other people."
+                n "Serves him right since he's always being mean to other people."
     
     else:
 
-        "Tyler seems to be going through a lot and you can’t help but keep replaying your discussion you had with Tyler."
+        "Tyler seems to be going through a lot and you can't help but keep replaying your discussion you had with Tyler."
 
         "How are you feeling based on your interaction with Tyler?"
 
@@ -660,9 +669,9 @@ label d3bedroom:
 
             "Understanding":
 
-                n "I can now understand some of Tyler’s behavior because of what’s been happening back at home."
+                n "I can now understand some of Tyler's behavior because of what's been happening back at home."
 
-                n "I should also be more understanding of his circumstances like when he doesn’t do good research because of what he is going through."
+                n "I should also be more understanding of his circumstances like when he doesn't do good research because of what he is going through."
 
             "Guilty":
 
@@ -670,7 +679,7 @@ label d3bedroom:
 
                 n "I feel so guilty for making a judgment about him without properly understanding his side."
     
-    "After reflecting on the events from today, you decide it’s time to wrap up for tonight."
+    "After reflecting on the events from today, you decide it's time to wrap up for tonight."
 
     "You still have some work left to do, but you also want to play a round of Minecraft before sleeping."
 
