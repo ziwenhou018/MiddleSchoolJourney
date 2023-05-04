@@ -21,7 +21,7 @@ label d5classroom:
     me "Okay Dr. Shah!"
 
     hide teacher
-    show harold neutral with moveinright
+    show harold neutral with moveinright1
 
     "Harold stands at the front of the class with his group, giving a presentation about President Franklin."
 
@@ -301,8 +301,9 @@ label d5classroom:
 
         "Now you feel really embarrassed. Even Harold is judging you."
 
-        show harold idk at right with moveinright
-        hide harold with moveoutright
+        show harold idk at right with moveinright1
+        pause 1.0
+        hide harold with moveoutright1
         show tyler embarrassed
 
         "But regardless of what everyone else thinks, the presentation is finally finished."
@@ -463,7 +464,7 @@ label d5classroom:
 
             "You are feeling a little dejected."
 
-            "Your presentation didn’t go as well as you had hoped, and Tyler seems to still hate your guts."
+            "Your presentation didn’t go as well as you had hoped, and Tyler seems to dislike you."
 
             "You wonder if things would have turned out differently if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group instead."
 
@@ -487,7 +488,7 @@ label d5classroom:
 
         "As you quickly try to scoop everything back into the backpack, you see Tyler walk by."
 
-        show tyler neutral with dissolve15
+        show tyler neutral with moveoutleft1
 
         "You and Tyler make eye contact, and a part of you hopes he stops to help you."
 

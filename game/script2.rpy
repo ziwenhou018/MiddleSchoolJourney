@@ -68,6 +68,8 @@ label d2hallway:
 
         "Ignore":
 
+            $ bullyNerdInteraction = "ignore"
+
             "You pretend that you didn't see anything and walk to class."
 
         "Intervene":
@@ -356,6 +358,26 @@ label d2classroom:
 
         hide tyler with dissolve1
     
+    elif bullyNerdInteraction == "neutral":
+
+        show tyler thinkb1
+
+        b "Why are you looking at me?"
+
+        "I don't think he realizes that you told on him."
+
+        hide tyler with dissolve1
+    
+    elif bullyNerdInteraction == "ignore":
+
+        show tyler thinkb1
+
+        b "Why are you looking at me?"
+
+        n "I wonder if he saw me see the interaction?"
+
+        hide tyler with dissolve1
+    
     show teacher neutral with dissolve1
 
     t "Good morning class! Happy Tuesday!"
@@ -392,15 +414,15 @@ label d2classroom:
 
     t "Here are some tips for successful collaboration."
 
-    hide teacher with moveoutleft
-
     "Dr. Shah hands out the paper on your desk."
 
     me "Thank you, Dr. Shah."
 
+    hide teacher with moveoutleft1
+
     "After Dr. Shah hands out the paper to everyone, she goes back to the front of the class."
 
-    show teacher explain with moveinright
+    show teacher explain with moveinright1
 
     t "Everyone, please read the tips silently as I read them out loud."
 
@@ -446,7 +468,7 @@ label d2classroom:
 
             me "Hey Tyler, what happened to your face?"
 
-            show tyler embarrassedb1
+            show tyler heheb1
 
             b "What do you mean what happened? Nothing happened."
 
@@ -549,7 +571,7 @@ label d2classroom:
 
             if not blemishPush:
 
-                show tyler embarrassedb1
+                show tyler heheb1
 
                 b "Uhhh..."
 
@@ -683,11 +705,11 @@ label d2bedroom:
 
             a "OMG ok"
 
-            a "sooo I heard... that Tyler's dad is having an affair with the principal!!"
+            a "sooo I heard... that Tyler's mom is having an affair with the principal!!"
 
             me "WHAT?? are you for real?"
 
-            a "YESSS people in our class were saying they were seeing his dad go into the principal's office multiple times this week!"
+            a "YESSS people in our class were saying they were seeing his mom go into the principal's office multiple times this week!"
 
             me "omg... that does seem a little suspicious..."
 
@@ -818,8 +840,9 @@ label d2bedroom:
 
             queue sound pig loop volume 0.7
 
-            show pig at left with moveinright
-            hide pig with moveoutleft
+            show pig with moveinright1
+            pause 0.5
+            hide pig with moveoutleft1
 
             "Every here and there as you're working, you still hear the sounds of animals nearby."
 

@@ -6,7 +6,7 @@ label d4start:
 
     stop sound
 
-    n "Time to go to schoo!"
+    n "Time to go to school!"
 
     jump d4classroom
 
@@ -38,10 +38,12 @@ label d4classroom:
 
     n "Ahhhh!! Tomorrow?!! Are we really ready for this?"
 
+    hide teacher
+
     "Everyone shuffles once again to get into their group."
 
-    show annie neutral slightleft
-    show tyler kindasad slightright
+    show annie neutral at slightleft
+    show tyler kindasad at slightright
     with dissolve15
 
     a "Okay, group. Let's each share our progress. I can go first."
@@ -78,8 +80,9 @@ label d4classroom:
 
     a "He's just free loading. Maybe we should have worked with Harold."
 
-    show harold surprised in left with moveinleft
-    hide harold with moveoutright
+    show harold surprised at left with moveinleft1
+    pause 0.5
+    hide harold with moveoutright1
 
     "Weirdly enough, Tyler did not respond to Annie's comments."
 
@@ -135,8 +138,8 @@ label d4classroom:
 
             "You walk up to Dr. Shah's desk."
 
-            show annie neutral at slightleft
-            show teacher neutral at slightright
+            show annie neutral at slightleft with move
+            show teacher neutral at slightright with dissolve
 
             t "Hey Annie and [name], anything happened to your group? I'm so looking forward to your group's presentation tomorrow."
 

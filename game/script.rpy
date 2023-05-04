@@ -13,6 +13,12 @@ define h = Character("Harold", color="#3d78cf")
 define dissolve1 = Dissolve(1)
 define dissolve15 = Dissolve(1.5)
 define dissolve2 = Dissolve(2)
+define move1 = MoveTransition(1)
+define move15 = MoveTransition(1.5)
+define moveinright1 = MoveTransition(1, enter=_moveright)
+define moveinleft1 = MoveTransition(1, enter=_moveleft)
+define moveoutright1 = MoveTransition(1, leave=_moveright)
+define moveoutleft1 = MoveTransition(1, leave=_moveleft)
 
 define audio.classroom = "audio/classroom.mp3"
 define audio.bedroom = "audio/bedroom.mp3"
@@ -28,7 +34,7 @@ define audio.cow = "audio/cow.mp3"
 define audio.sheep = "audio/sheep.mp3"
 define audio.zombie = "audio/zombie.mp3"
 define audio.creeper = "audio/creeper.mp3"
-define audio.subwoofer = "audio/wsubwoofer.mp3"
+define audio.subwoofer = "audio/subwoofer.mp3"
 
 transform slightleft:
     xalign 0.3 yalign 1.0
@@ -62,8 +68,6 @@ label start:
 
     default tylerPoints = 0
     default projectPoints = 0
-
-    # jump d2hallway
 
     play sound alarm volume 0.8
 
@@ -165,19 +169,20 @@ label d1classroom:
 
     hide teacher with dissolve
 
-    # TODO edit classroom background to have some students look at each other
-
     "Everyone looks around in the classroom, eager to form groups. Some students have already made eye contact."
-
-    # TODO edit classroom background to have some students sleeping
 
     "Others... you're not sure if they even listened to the teacher's instructions."
 
+    show annie neutral at right with dissolve15
+
     n "Annie! Please be in my group, bestie!"
+
+    show annie happy
     
     "Lucky enough, you glance at Annie who is also looking back at you smiling."
 
     show teacher neutral with dissolve
+    show annie neutral
 
     t "Alright now, feel free to start forming groups!"
 
@@ -187,7 +192,7 @@ label d1classroom:
     
     "With that, you quickly get up and convene with Annie. She does the same with you."
 
-    show annie neutral with dissolve1
+    show annie neutral at center with move1
 
     a "Hey [name]!"
 
@@ -462,12 +467,13 @@ label d1bedroom:
             queue sound cow loop volume 0.4
             queue sound sheep loop volume 0.7
 
-            show pig at left with moveinright
-            show cow at center with moveinright
-            show sheep at right with moveinright
-            hide pig with moveoutleft
-            hide cow with moveoutleft
-            hide sheep with moveoutleft
+            show pig at left with moveinright1
+            show cow at center with moveinright1
+            show sheep at right with moveinright1
+            pause 0.5
+            hide pig with moveoutleft1
+            hide cow with moveoutleft1
+            hide sheep with moveoutleft1
 
             "You see sheep, pigs and cows here and there."
 

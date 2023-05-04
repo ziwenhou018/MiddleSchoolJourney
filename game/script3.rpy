@@ -54,7 +54,7 @@ label d3classroom:
 
     "Dr. Shah begins walking around handing everyone a piece of paper once again."
 
-    hide teacher with moveoutleft
+    hide teacher with moveoutleft1
 
     "Dr. Shah hands out the paper on your desk."
 
@@ -62,7 +62,7 @@ label d3classroom:
 
     "After Dr. Shah hands out the paper to everyone, she goes back to the front of the class."
 
-    show teacher explain with moveinright
+    show teacher explain with moveinright1
 
     t "Everyone, please read the tips silently as I read them out loud."
 
@@ -92,8 +92,8 @@ label d3classroom:
 
     "The class shuffled into their groups. You head to your group as well."
 
-    show annie neutral slightleft
-    show tyler neutralb2 slightright
+    show annie neutral at slightleft
+    show tyler neutralb2 at slightright
 
     me "Hey guys, so what new research have you guys found?"
 
@@ -107,7 +107,7 @@ label d3classroom:
 
     me "I did some research about [president]'s inauguration."
 
-    if nightAction2 == research:
+    if nightAction2 == "research":
 
         show annie surprised
 
@@ -632,9 +632,9 @@ label d3bedroom:
 
             "Surprised":
 
-                n "It is very unexpected seeing Tyler like that… I’ve never seen Tyler like that before!"
+                n "It is very unexpected seeing Tyler like that..."
 
-                n "It was surprising to see Tyler express emotions like that."
+                n "It was surprising to see Tyler express emotions like sadness."
 
             "Satisfied":
 
@@ -672,7 +672,7 @@ label d3bedroom:
     
     "After reflecting on the events from today, you decide it’s time to wrap up for tonight."
 
-    "You still have some work left to do, but you also want to play a round of minecraft before sleeping."
+    "You still have some work left to do, but you also want to play a round of Minecraft before sleeping."
 
     "What do you choose to do?"
 
