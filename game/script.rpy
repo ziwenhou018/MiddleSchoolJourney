@@ -51,11 +51,17 @@ label start:
     default president = "Washington"
     default feeling = "worried"
     default bullyNerdInteraction = "hurt"
-    default nightAction = "chat"
+    default nightAction1 = "chat"
+    default nightAction2 = "games"
     default blemishAsk = False
     default blemishPush = False
     default gossipListen = False
     default tylerWillDoWork = False
+    default tylerStory = False
+    default d4action = 1
+
+    default tylerPoints = 0
+    default projectPoints = 0
 
     # jump d2hallway
 
@@ -151,13 +157,13 @@ label d1classroom:
 
     show teacher explain
 
-    t "For this week, you will be researching historical presidents."
+    t "For this week, you will be researching American presidents."
     
     t "At the end of the week, you will be presenting your topic."
     
     t "You can choose to work in groups of 3, but I would like to remind you that this project will be a significant part of your final grade!"
 
-    hide teacher explain with dissolve
+    hide teacher with dissolve
 
     # TODO edit classroom background to have some students look at each other
 
@@ -177,7 +183,7 @@ label d1classroom:
 
     t "Good luck!"
 
-    hide teacher neutral with dissolve15
+    hide teacher with dissolve15
     
     "With that, you quickly get up and convene with Annie. She does the same with you."
 
@@ -202,12 +208,12 @@ label d1classroom:
 
     a "There's Harold. He's pretty hard working, but does he even want to work with anyone?"
 
-    hide harold neutral with dissolve
+    hide harold with dissolve
     show tyler neutral with dissolve
 
     a "There's also Tyler, I guess? I heard he's mean to some people, but I also heard he's also nice to a couple others! Maybe we should give him a chance."
 
-    hide tyler neutral with dissolve
+    hide tyler with dissolve
     show annie neutral at center with move
 
     a "I'll leave it to you to choose who we should work with!"
@@ -223,7 +229,7 @@ label d1classroom:
 
             t "Sorry, but Harold isn't ready to work with you yet! Maybe try again when the 'team' allows it!"
 
-            hide teacher embarrassed with moveoutright
+            hide teacher with moveoutright
 
             me "What... what 'team'?"
 
@@ -251,8 +257,8 @@ label d1classroom:
 
     b "You want to work with me? Sure, why not?"
 
-    hide annie neutral
-    hide tyler smile
+    hide annie
+    hide tyler
     with dissolve
 
     "Your group spends some time brainstorming a historical president."
@@ -375,7 +381,7 @@ label d1bedroom:
 
         "Do a bit more research":
 
-            $ nightAction = "research"
+            $ nightAction1 = "research"
 
             n "I should probably spend some more time doing my part of the research so that our group is a bit ahead."
 
@@ -392,10 +398,13 @@ label d1bedroom:
 
                     "1st":
                         $ presidentNum = "1st"
+                        $ projectPoints = projectPoints + 1
                     "2nd":
                         $ presidentNum = "2nd"
+                        $ projectPoints = projectPoints - 1
                     "3rd":
                         $ presidentNum = "3rd"
+                        $ projectPoints = projectPoints - 1
             
             elif president == "Lincoln":
 
@@ -404,10 +413,13 @@ label d1bedroom:
 
                     "5th":
                         $ presidentNum = "5th"
+                        $ projectPoints = projectPoints - 1
                     "16th":
                         $ presidentNum = "16th"
+                        $ projectPoints = projectPoints + 1
                     "31st":
                         $ presidentNum = "31st"
+                        $ projectPoints = projectPoints - 1
 
             elif president == "Hoover":
 
@@ -416,16 +428,19 @@ label d1bedroom:
 
                     "17th":
                         $ presidentNum = "17th"
+                        $ projectPoints = projectPoints - 1
                     "20th":
                         $ presidentNum = "20th"
+                        $ projectPoints = projectPoints - 1
                     "31st":
                         $ presidentNum = "31st"
+                        $ projectPoints = projectPoints + 1
             
             n "Wow, I didn't know that! Looks like we'll be a bit ahead of our game!"
 
         "Play the video games that you just bought":
 
-            $ nightAction = "games"
+            $ nightAction1 = "games"
 
             scene computer with pixellate
 
@@ -486,7 +501,7 @@ label d1bedroom:
 
         "Hang out with Annie":
 
-            $ nightAction = "chat"
+            $ nightAction1 = "chat"
 
             "You text Annie."
 
@@ -554,7 +569,7 @@ label d1bedroom:
 
             "You're excited to see what everyone has found from their research."
 
-            if nightAction == "research":
+            if nightAction1 == "research":
 
                 "Doing that extra bit definitely helps your group in the long run."
 

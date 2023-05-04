@@ -36,8 +36,10 @@ label d2hallway:
     "Walking towards Dr. Shah's classroom, you spot Tyler. Someone else seems to be standing next to him!"
 
     show harold scared at slightleft
-    show tyler mad at slightright
+    show tyler madb1 at slightright
     with dissolve1
+
+    n "What's up with Tyler's face..."
 
     b "I said give me your homework!! I need to copy the answers right now, what part of that don't you understand???"
 
@@ -77,11 +79,13 @@ label d2hallway:
 
                 "Tell Tyler to stop":
 
+                    $ tylerPoints = tylerPoints - 1
+
                     $ bullyNerdInteraction = "hurt"
 
                     me "Hey Tyler, leave Harold alone! You should have done your own homework instead of bothering Harold to get his homework."
 
-                    show tyler bruh
+                    show tyler bruhb1
                     show harold surprised
 
                     b "Get lost, [name]! This is none of your business."
@@ -89,7 +93,7 @@ label d2hallway:
                     "You suddenly hear loud footsteps approaching."
 
                     show harold scared at left with move
-                    show tyler bruh at right with move
+                    show tyler bruhb1 at right with move
                     show teacher neutral with dissolve1
 
                     t "What's going on here?"
@@ -98,7 +102,7 @@ label d2hallway:
 
                     me "Tyler was trying to make Harold give him his homework to copy."
 
-                    show tyler hehe
+                    show tyler heheb1
                     show teacher mad
 
                     b "I was just joking around!"
@@ -113,16 +117,16 @@ label d2hallway:
 
                     h "Ok Dr. Shah, thank you! I'm leaving now."
 
-                    hide harold shappy with moveoutleft
+                    hide harold with moveoutleft
                     show teacher mad
                     
                     t "Tyler, please do not do this again. Now everyone, head to class."
 
-                    show tyler bruh
+                    show tyler bruhb1
 
                     b "..."
 
-                    hide tyler bruh with moveoutright
+                    hide tyler with moveoutright
                     show teacher happy
 
                     t "Thank you for standing up for Harold like that. That was very brave of you."
@@ -133,9 +137,11 @@ label d2hallway:
 
                     t "Let's head to class."
 
-                    hide teacher neutral with dissolve15
+                    hide teacher with dissolve15
 
                 "Let Tyler copy your homework":
+
+                    $ tylerPoints = tylerPoints + 1
 
                     $ bullyNerdInteraction = "help"
 
@@ -143,14 +149,14 @@ label d2hallway:
                     
                     me "Just take my homework instead."
 
-                    show tyler surprised
+                    show tyler surprisedb1
                     show harold surprised
 
                     b "Wait what? Really?"
 
                     me "Yeah, just take it and leave Harold alone."
 
-                    show tyler smile
+                    show tyler smileb1
 
                     me "Harold, you should just head to class."
 
@@ -158,7 +164,7 @@ label d2hallway:
 
                     h "Oh... ummm thanks..."
 
-                    hide harold shappy with moveoutleft
+                    hide harold with moveoutleft
 
                     "You suddenly hear loud footsteps approaching."
 
@@ -166,7 +172,7 @@ label d2hallway:
 
                     t "What's going on here?"
 
-                    show tyler hehe
+                    show tyler heheb1
 
                     b "Nothing."
 
@@ -175,7 +181,7 @@ label d2hallway:
                     b "Uhhh yeah!"
 
                     show teacher mad
-                    show tyler embarrassed
+                    show tyler embarrassedb1
 
                     t "I overhead you two talking about giving your assignment to Tyler to copy and that is unacceptable behavior."
 
@@ -184,7 +190,7 @@ label d2hallway:
                     t "[name], I'm happy you tried to help Harold in the situation but you should not be giving up your homework to be copied either."
 
                     show teacher mad
-                    show tyler hehe
+                    show tyler heheb1
 
                     t "Tyler, you should be doing your own work instead of copying off of your peers."
 
@@ -192,11 +198,13 @@ label d2hallway:
 
                     "You and Tyler awkwardly walk with Dr. Shah back to class."
 
-                    hide tyler hehe
-                    hide teacher mad
+                    hide tyler
+                    hide teacher
                     with dissolve1
 
                 "Tell Harold to let Tyler copy":
+
+                    $ tylerPoints = tylerPoints + 1
 
                     $ bullyNerdInteraction = "help"
 
@@ -204,7 +212,7 @@ label d2hallway:
 
                     h "What?? Why should I do that?"
 
-                    show tyler evil
+                    show tyler evilb1
                     show harold scared
 
                     b "Haha, even [name] is saying that you should give me your homework! Now you have no excuse!"
@@ -212,12 +220,12 @@ label d2hallway:
                     "You suddenly hear loud footsteps approaching."
 
                     show harold scared at left with move
-                    show tyler bruh at right with move
+                    show tyler bruhb1 at right with move
                     show teacher neutral with dissolve1
 
                     t "What's going on here?"
 
-                    show tyler hehe
+                    show tyler heheb1
 
                     b "Nothing."
 
@@ -225,7 +233,7 @@ label d2hallway:
 
                     h "Tyler and [name] were trying to make me give him my homework to copy!"
 
-                    show tyler embarrassed
+                    show tyler embarrassedb1
                     show teacher mad
                     show harold scared
 
@@ -243,21 +251,21 @@ label d2hallway:
 
                     h "Ok Dr. Shah, thank you! I'm leaving now."
 
-                    hide harold shappy with moveoutleft
+                    hide harold with moveoutleft
                     show teacher mad
                     
                     t "Boys, please do not do this again. Now everyone, head to class."
 
-                    hide teacher mad with dissolve15
-                    show tyler hehe at center with move
+                    hide teacher with dissolve15
+                    show tyler heheb1 at center with move
 
                     b "Well that didn't work."
 
-                    show tyler smile
+                    show tyler smileb1
 
                     b "Let's hurry up to class before Dr. Shah yells at us again."
 
-                    hide tyler smile with dissolve1
+                    hide tyler with dissolve1
 
         "Try to find a teacher":
 
@@ -267,8 +275,8 @@ label d2hallway:
 
             n "I can't leave Harold there alone! I wonder if theres a teacher nearby who can help..."
 
-            hide tyler mad
-            hide harold scared
+            hide tyler
+            hide harold
             with dissolve1
 
             "You look around the hallway and spot Dr. Shah."
@@ -285,7 +293,7 @@ label d2hallway:
             
             t "I will go over and check out the situation."
 
-            hide teacher embarrassed with dissolve1
+            hide teacher with dissolve1
 
             "Dr. Shah began walking over to Tyler and Harold."
             
@@ -309,7 +317,7 @@ label d2classroom:
 
     t "Everyone, get into your project groups right away! Chop chop!"
 
-    hide teacher explain with dissolve1
+    hide teacher with dissolve1
 
     "The class quickly shuffles around..."
 
@@ -318,35 +326,35 @@ label d2classroom:
     "You sit with Annie and Tyler."
 
     show annie neutral at slightleft
-    show tyler neutral at slightright
+    show tyler neutralb1 at slightright
     with dissolve1
 
     "The interaction in the hallway was quite awkward."
 
     "You quickly glance at Tyler to check how he's doing."
 
-    hide annie neutral with dissolve1
-    show tyler neutral at center with move
+    hide annie with dissolve1
+    show tyler neutralb1 at center with move
 
     if bullyNerdInteraction == "help":
 
-        show tyler smile
+        show tyler smileb1
 
         b "Kinda nice Dr. Shah didn't give us detention or anything."
 
         "Random Student" "Shhhh!!!"
 
-        hide tyler smile with dissolve1
+        hide tyler with dissolve1
 
     elif bullyNerdInteraction == "hurt":
         
-        show tyler bruh
+        show tyler bruhb1
 
         "He gives you the side eye."
 
         b "Hmph."
 
-        hide tyler bruh with dissolve1
+        hide tyler with dissolve1
     
     show teacher neutral with dissolve1
 
@@ -356,7 +364,7 @@ label d2classroom:
 
     t "I hope you all weren't up playing Minecraft or talking to your friends and started on your work!"
 
-    if nightAction == "research":
+    if nightAction1 == "research":
 
         n "Our group should be pleased that I found that [president] is the [presidentNum] president of America!"
     
@@ -384,7 +392,7 @@ label d2classroom:
 
     t "Here are some tips for successful collaboration."
 
-    hide teacher explain with moveoutleft
+    hide teacher with moveoutleft
 
     "Dr. Shah hands out the paper on your desk."
 
@@ -416,12 +424,12 @@ label d2classroom:
 
     t "Okay everyone! Start working with your groups!"
 
-    hide teacher happy with dissolve1
-    show tyler neutral with dissolve1
+    hide teacher with dissolve1
+    show tyler neutralb1 with dissolve1
 
-    "You glance at Tyler and see a very noticeable blemish on his face!"
+    "You glance at Tyler and remember the noticeable bruise on his face from earlier!"
 
-    n "What happened to his face. Should I ask about it?"
+    n "What happened to his face? Should I finally ask about it?"
 
     menu:
         "Ask about Tyler's face?"
@@ -438,7 +446,7 @@ label d2classroom:
 
             me "Hey Tyler, what happened to your face?"
 
-            show tyler embarrassed
+            show tyler embarrassedb1
 
             b "What do you mean what happened? Nothing happened."
 
@@ -454,32 +462,36 @@ label d2classroom:
 
                 "Yes":
 
+                    $ tylerPoints = tylerPoints - 1
+
                     $ blemishPush = True
 
                     me "Did you get beat up or something?"
 
-                    show tyler mad
+                    show tyler madb1
 
                     b "Shut up, [name]. Mind your own business."
 
                 "No":
 
+                    $ tylerPoints = tylerPoints + 1
+
                     me "Are you sure it's nothing? I hope you're okay."
 
-                    show tyler smile
+                    show tyler smileb1
 
                     b "Uh, thanks, I guess. Why do you care?"
             
             "Before either of you continue, Annie jumps in the conversation."
     
-    show tyler neutral at slightright with move
+    show tyler neutralb1 at slightright with move
     show annie neutral at slightleft with dissolve1
 
     a "Hey, guys, what progress did you make in your research?"
 
     me "I did some research."
 
-    if nightAction == "research":
+    if nightAction1 == "research":
 
         me "I also found that [president] is the [presidentNum] president of America!"
 
@@ -495,7 +507,7 @@ label d2classroom:
 
             a "Is that true? That seems kind of off..."
     
-    show tyler think
+    show tyler thinkb1
 
     b "Hmmm... We were supposed to do the research?"
 
@@ -517,7 +529,7 @@ label d2classroom:
 
             a "That's alright. Can you remember to work on it today?"
 
-            show tyler neutral
+            show tyler neutralb1
 
             b "Ok."
 
@@ -529,13 +541,15 @@ label d2classroom:
 
         "Inquire about why Tyler didn't work":
 
+            $ projectPoints = projectPoints + 1
+
             $ tylerWillDoWork = True
 
             me "Tyler, did you really forget to work on the research?"
 
             if not blemishPush:
 
-                show tyler embarrassed
+                show tyler embarrassedb1
 
                 b "Uhhh..."
 
@@ -543,7 +557,7 @@ label d2classroom:
 
                 me "It's a team effort, and we're all in this together."
 
-                show tyler neutral
+                show tyler neutralb1
 
                 b "Alright, alright. I'll try to do the research tonight."
 
@@ -551,17 +565,17 @@ label d2classroom:
 
                 "As the meeting is about to end, Tyler quickly interrupts."
 
-                show tyler kindasad
+                show tyler kindasadb1
 
                 b "Sorry, I didn't forget. Something just happened... that prevented me from doing my work..."
 
                 "Something happened? You're quite surprised."
 
-                show tyler hehe
+                show tyler heheb1
 
                 b "But anyway, see you all tomorrow!"
 
-                hide tyler hehe with moveoutright
+                hide tyler with moveoutright
 
                 "You hope that Tyler can do his part tonight."
 
@@ -571,17 +585,17 @@ label d2classroom:
             
             else:
 
-                show tyler mad
+                show tyler madb1
 
                 b "Why do you have to pry on my life so much? Can't you just leave me alone?"
 
                 me "Aren't you being a hypocrite? You wouldn't leave Harold alone."
 
-                show tyler bruh
+                show tyler bruhb1
 
                 b "Well that's different..."
 
-                show tyler neutral
+                show tyler neutralb1
 
                 b "Ugh ok fine. I'll do my part."
 
@@ -595,21 +609,23 @@ label d2classroom:
         
         "Yell at Tyler":
 
+            $ tylerPoints = tylerPoints - 1
+
             me "Tyler! You can't be doing this! This is a group project! You need to contribute just like we do!"
 
             show teacher mad at right with moveinright
 
             t "Students, please no yelling at your classmates! Remember rule 7 is to stay positive!"
 
-            hide teacher mad with moveoutright
+            hide teacher with moveoutright
 
-            show tyler bruh
+            show tyler bruhb1
 
             b "Yea [name]. No yelling at your classmates."
 
             me "Well you should remember that rule 5 is to take responsibility, which you clearly aren't doing."
 
-            show tyler mad
+            show tyler madb1
 
             b "Clearly, you're not following rule 4, which is to respect others."
             
@@ -717,7 +733,7 @@ label d2bedroom:
 
         "Do more research":
 
-            $ nightAction = "research"
+            $ nightAction2 = "research"
 
             n "I should probably spend some more time doing my part of the research so that our group is a bit ahead."
 
@@ -736,10 +752,13 @@ label d2bedroom:
 
                     "1777":
                         $ presidentYear = "1777"
+                        $ projectPoints = projectPoints - 1
                     "1781":
                         $ presidentYear = "1781"
+                        $ projectPoints = projectPoints - 1
                     "1789":
                         $ presidentYear = "1789"
+                        $ projectPoints = projectPoints + 1
             
             elif president == "Lincoln":
 
@@ -748,10 +767,13 @@ label d2bedroom:
 
                     "1861":
                         $ presidentYear = "1861"
+                        $ projectPoints = projectPoints + 1
                     "1863":
                         $ presidentYear = "1863"
+                        $ projectPoints = projectPoints - 1
                     "1865":
                         $ presidentYear = "1865"
+                        $ projectPoints = projectPoints - 1
 
             elif president == "Hoover":
 
@@ -760,10 +782,13 @@ label d2bedroom:
 
                     "1921":
                         $ presidentYear = "1921"
+                        $ projectPoints = projectPoints - 1
                     "1929":
                         $ presidentYear = "1929"
+                        $ projectPoints = projectPoints + 1
                     "1933":
                         $ presidentYear = "1933"
+                        $ projectPoints = projectPoints - 1
             
             n "That's quite a lot of years ago!"
 
@@ -771,7 +796,7 @@ label d2bedroom:
 
         "Play video games":
 
-            $ nightAction = "games"
+            $ nightAction2 = "games"
 
             scene computer with pixellate
 
@@ -828,7 +853,7 @@ label d2bedroom:
 
             stop music fadeout 1.0
     
-    scene bedroom
+    scene bedroom with pixellate
     play music bedroom if_changed
 
     "You feel that you accomplished quite a bit today."
@@ -850,3 +875,5 @@ label d2bedroom:
     stop music fadeout 1.0
     scene black
     with dissolve2
+
+    jump d3start

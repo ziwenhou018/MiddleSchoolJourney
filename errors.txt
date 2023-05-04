@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1012: expected statement.
-    blemishPush = True
-                ^
+The label d3classroom is defined twice, at File "game/script3.rpy", line 27:
+label d3classroom:
+and File "game/script4.rpy", line 13:
+label d3classroom:
+
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Apr 30 18:27:21 2023
+Thu May  4 06:14:04 2023

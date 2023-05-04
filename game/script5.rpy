@@ -1,553 +1,504 @@
-label d2classroom:
+label d5classroom:
 
     scene classroom with dissolve15
 
-    "It's Miss Baker's class again."
-    
-    show teacher neutral with dissolve1
+    play music classroom
 
-    t "Good morning class!"
+    "It’s the day for the presentation!"
+
+    show teacher neutral with dissolve15
+
+    t "Class! It’s time for the presentation now!"
+
+    show teacher happy
+
+    t "I can’t wait to hear your wonderful presentations."
 
     show teacher explain
 
-    t "Everyone, get into your project groups right away! Chop chop!"
+    t "Harold, your group will be the first. And [name], get ready! Your group will be the next!"
 
-    hide teacher explain with dissolve1
+    me "Okay Dr. Shah!"
 
-    "The class quickly shuffles around..."
+    hide teacher
+    show harold neutral with moveinright
 
-    "...except the student that's still sleeping!"
+    "Harold stands at the front of the class with his group, giving a presentation about President Franklin."
 
-    "You sit with Annie and Tyler."
+    h "And so, as you can see, Franklin's leadership during the Great Depression and World War II had a profound impact on our country's history."
 
-    show annie neutral at slightleft
-    show tyler neutral at slightright
-    with dissolve1
+    "As you watch Harold’s presentation about Franklin D. Roosevelt, you’re really impressed by how thorough the research is and how confidently he presents the points in each slide."
 
-    "The interaction in the hallway was quite awkward."
+    "Strangely enough, none of Harold’s other groupmates seem to be taking turns in helping him present."
 
-    "You quickly glance at Tyler to check how he's doing."
+    "For a moment, you wonder what it would have been like if Harold joined you and Annie’s group instead..."
 
-    hide annie neutral with dissolve1
-    show tyler neutral at center with move
+    "Harold and his group finished their presentation to a smattering of polite applause."
 
-    if bullyNerdInteraction == "help":
+    show harold neutral at slightleft with move
+    show teacher happy at slightright with dissolve15
+
+    t "Well done, Harold's group! That was an excellent presentation."
+
+    show harold happy
+
+    h "Thank you, Dr. Shah."
+
+    t "Now, let's hear from the rest of the group."
+
+    hide harold with dissolve15
+    hide teacher with dissolve15
+
+    "You and Annie exchange nervous glances before beginning your presentation."
+
+    n "Oh! Now it’s our turn!"
+
+    show annie embarrassed at slightleft
+    show tyler hehe at slightright with dissolve15
+
+    "Ahh! You feel very nervous even though you’ve practiced multiple times."
+
+    "You take a deep breath, and hope that you don’t stutter on your words."
+
+    show annie happy
+    show tyler smile
+
+    if projectPoints >= 4:
+
+        "Annie goes first presenting Section A on [president]."
+    
+        n "Nice work Annie! I knew I could rely on you!"
+
+        "You go next, presenting Section B. You started off a little shaky, but you ended up pulling through till the end."
+
+        if nightAction1 == "research":
+
+            me "I found that [president] is the [presidentNum] president of America!"
+
+            if nightAction2 == "research":
+                
+                me "I also found that [president] entered office in [presidentYear]!"
+
+        elif nightAction2 == "research":
+
+            me "I found that [president] entered office in [presidentYear]!"
+        
+        show annie embarrassed
+        show tyler hehe
+
+        "Next, is Tyler’s turn to present Section C."
+
+        "You hold your breath for a moment as he presents."
+
+        "It’s not terrible, at the very least he remembered what he was supposed to say, but it’s not like Harold’s either."
+
+        "Perhaps even Tyler did not want to look bad in front of everyone else."
 
         show tyler smile
+        show annie neutral
 
-        b "Kinda nice Miss Baker didn't give us detention or anything."
+        if d4action == 3:
 
-        "Random Student" "Shhhh!!!"
+            "Regardless of what everyone else thinks, the presentation is finally finished."
 
-        hide tyler smile with dissolve1
+            n "Yessss!! This is finally done!!"
 
-    elif bullyNerdInteraction == "hurt":
-        
-        show tyler bruh
+            show teacher happy at right with moveinright
 
-        "He gives you the side eye."
+            t "Good Job! [name], I just wanna say I really appreciate your effort and your dedication to the project."
 
-        b "Hmph."
+            t "You did a fantastic job with the work you completed. It's clear that you put a lot of time and thought into it."
 
-        hide tyler bruh with dissolve1
-    
-    show teacher neutral with dissolve1
+            show teacher neutral
 
-    t "Good morning class! Happy Tuesday!"
-    
-    show teacher explain
+            me "Thank you, Dr. Shah. It was a lot of work, but I wanted to make sure we did a good job on the project."
 
-    t "I hope you all weren't up playing Minecraft or talking to your friends and started on your work!"
+            show teacher explain
 
-    if nightAction == "research":
+            t "I can definitely appreciate that, but I also want to stress the importance of collaboration in group work."
 
-        n "Our group should be pleased that I found that [president] is the [presidentNum] president of America!"
-    
-    else:
+            t "It's important to work together and support each other in order to achieve success."
 
-        n "Wow, is she a psychic?"
+            show teacher embarrassed
 
-        n "It's okay though, I still got a little bit of research done."
+            t "I can tell that the distribution of work was… uneven."
 
-    show teacher neutral
+            me "I’m sooo sorry for this, Dr. Shah. I was just thinking that it would probably be more effective if I could just finish this on my own."
 
-    "Miss Baker stands at the front of the room, handing out a sheet of paper to each student."
+            me "Also, our group didn’t have much time left, but there were still so many things that haven’t been done…"
 
-    show teacher explain
+            me "In fact, Annie also helped me with this. But definitely we'll make sure to do better in teamwork next time."
 
-    t "Alright, class. I want to emphasize that this assignment is a teamwork project..."
+            show teacher neutral
 
-    t "...which means that every one of you has to participate and do something in the group work."
+            t "I totally understand your situation, [name]. Thank you for your honesty and willingness to take responsibility."
 
-    show teacher happy
+            show teacher explain
 
-    t "It's not just about individual performance, but also how well you work together as a team."
+            t "Next time, if you are in a similar situation, remember, you can always reach out to me at any time. I will be very willing to give you tips for teamwork!"
 
-    show teacher explain
+            show teacher neutral
 
-    t "Here are some tips for successful collaboration."
+            me "Thank you Dr. Shah. I will."
 
-    hide teacher explain with dissolve
+            show tyler hehe
 
-    "Miss Baker hands out the paper on your desk."
+            "You glanced at Tyler, he definitely also heard Dr. Shah’s comments."
 
-    me "Thank you, Miss Baker."
+            t "And Tyler, I know you struggled with your part of the project, but I have faith that you'll improve with more practice."
 
-    "After Miss Baker hands out the paper to everyone, she goes back to the front of the class."
+            show tyler smile
 
-    show teacher explain with dissolve
+            b "Thanks, Dr. Shah."
 
-    t "Everyone, please read the tips silently as I read them out loud."
+            show teacher happy
 
-    t "1. Listen to others: It's important to listen to your team members and consider their ideas and suggestions."
+            t "Overall, good job. Keep up the good work, everyone."
 
-    t "2. Communicate effectively: Communicate your ideas clearly and ask questions to make sure you understand what your team members are saying."
+        elif d4action == 2:
 
-    t "3. Set goals: Set clear goals and expectations for the project so everyone knows what they are working towards."
+            "Regardless of what everyone else thinks, the presentation is finally finished."
 
-    t "4. Respect others: Show respect to your team members and be open to different perspectives and opinions."
+            n "It’s finally finished!!"
 
-    t "5. Take responsibility: Take responsibility for your part in the project and make sure you are meeting deadlines and contributing to the team effort."
+            n "I had been worried sick!!!! But fortunately Tyler successfully completed his part for the presentation."
 
-    t "6. Be flexible: Be open to changes in the project and be willing to adjust your approach if needed."
+            show teacher happy at right with moveinright
+            show annie happy
+            show tyler happy
 
-    t "7. Stay positive: Encourage your team members and stay positive, even if things get difficult."
+            t "Good job group! I love how you analyze the President’s motivation for making the reform."
 
-    "As Dr. Shah explains this, you hope that Tyler is paying attention."
+            show annie neutral
+            show tyler smile
+            show teacher neutral
 
-    show teacher happy
+            t "However, I have to say that I think it could have done better in presenting the president’s reform policy."
 
-    t "Okay everyone! Start working with your groups!"
+            show teacher happy
 
-    hide teacher happy with dissolve1
-    show tyler neutral with dissolve1
-
-    "You glance at Tyler and see a very noticeable blemish on his face!"
-
-    n "What happened to his face. Should I ask about it?"
-
-    menu:
-        "Ask about Tyler's face?"
-
-        "Ignore it":
+            t "Well, nonetheless, I did want to acknowledge that I noticed your group had an equal share in the work and that you worked very well for your teamwork!"
             
-            n "Why should I care about it? Just ignore it."
+            t "That's definitely something to be proud of."
 
-            n "Besides, we should probably focus on the project."
+            show teacher neutral
 
-        "Ask":
+            me "Thank you Dr. Shah! I appreciate that."
 
-            $ blemishAsk = True
+            me "I did try my best to make sure everyone had a role in the project and that we were all working together effectively."
 
-            me "Hey Tyler, what happened to your face?"
+            me "But I do agree that there were some areas where we could have improved."
 
-            show tyler embarrassed
+            show teacher happy
 
-            b "What do you mean what happened? Nothing happened."
-
-            "Hmm, he's pretty resilient about telling you what happened."
-
-            "Since he threatened Harold for his homework today, perhaps he was unsuccessful previously and got in a fight?"
-
-            "It could have been from earlier today or even from yesterday."
-
-            "Will you pry on it further?"
-
-            menu:
-
-                "Yes":
-
-                    $ blemishPush = True
-
-                    me "Did you get beat up or something?"
-
-                    show tyler mad
-
-                    b "Shut up, [name]. Mind your own business."
-
-                "No":
-
-                    me "Are you sure it's nothing? I hope you're okay."
-
-                    show tyler smile
-
-                    b "Uh, thanks, I guess. Why do you care?"
+            t "Absolutely. And I don't want to discount the hard work you put in. It's clear that you take group work seriously and want to make sure everyone is involved."
             
-            "Before either of you continue, Annie jumps in the conversation."
-    
-    show tyler neutral at slightright with move
-    show annie neutral at slightleft with dissolve1
+            show teacher explain
 
-    a "Hey, guys, what progress did you make in your research?"
+            t "Moving forward, I think it would be helpful to focus on improving communication within the group and making sure that everyone is on the same page."
 
-    me "I did some research."
+            show teacher neutral
 
-    if nightAction == "research":
-
-        me "I also found that [president] is the [presidentNum] president of America!"
-
-        if research(1):
+            me "Okay, that makes sense. we'll definitely keep that in mind."
 
             show annie happy
+            show tyler happy
 
-            a "Great work [name]!"
-        
-        else:
+            t "Great! I'm glad to hear that. Remember, group work can be challenging, but it's also a great opportunity to learn from each other and grow as a team."
+
+            show annie neutral
+            show tyler smile
+
+            me "Thank you Dr. Shah for the advice and encouragement."
+
+        elif d4action == 1:
+
+            "Regardless of what everyone else thinks, the presentation is finally finished."
+
+            show teacher happy at right with moveinright
+            show annie happy
+
+            t "I just wanted to take a moment to say how impressed I am with the work you and Annie did on your part of the project."
+
+            t "Your effort really paid off and it shows in the quality of your work."
+
+            show annie neutral
+            show tyler hehe
+            show teacher neutral
+
+            t "However, I did notice that Tyler struggled with his part and his work wasn't up to the same standard."
+
+            show teacher explain
+
+            t "As a group, I think it would be beneficial to work on collaborating more effectively and learn how to work with different types of people."
+            
+            show teacher neutral
+            show tyler neutral
+
+            me "Thank you, Dr. Shah! We really appreciate the recognition."
+
+            me "We tried our best to complete our part of the project to the best of our abilities."
+
+            me "As for Tyler, we did try to help him out as much as we could."
+
+            t "I understand, and I appreciate your efforts to help Tyler."
+            
+            t "However, it's important to remember that group work is all about collaboration and working together towards a common goal."
+
+            t "I think as a group, there may have been some room for improvement in supporting each other and ensuring that everyone understood their roles and responsibilities."
+            
+            a "I see your point, and I agree. We could have done better in communicating with each other and making sure everyone was on the same page."
 
             show annie think
 
-            a "Is that true? That seems kind of off..."
-    
-    show tyler think
-
-    b "Hmmm... We were supposed to do the research?"
-
-    show annie surprised
-
-    n "What the heck! Did Tyler actually forget or did he purposefully not do it?"
-
-    n "Should I confront him about it?"
-
-    show annie neutral
-
-    menu:
-
-        "Ignore it":
-
-            "You're not really the confrontational type."
+            a "Do you have any advice on how we can improve group work for the future?"
 
             show annie neutral
+            show teacher explain
 
-            a "That's alright. Can you remember to work on it today?"
-
-            show tyler neutral
-
-            b "Ok."
-
-            "You're quite skeptical about that short ‘Ok'."
-
-            play sound bell volume 0.8
-
-            "After a pretty short meeting, everyone departs for their next class."
-
-        "Inquire about why Tyler didn't work":
-
-            me "Tyler, did you really forget to work on the research?"
-
-            if not blemishPush:
-
-                show tyler embarrassed
-
-                b "Uhhh..."
-
-                me "Hey, Tyler, you need to contribute to this project. You need to take responsibility like Dr. Shah said."
-
-                me "It's a team effort, and we're all in this together."
-
-                show tyler neutral
-
-                b "Alright, alright. I'll try to do the research tonight."
-
-                play sound bell volume 0.8
-
-                "As the meeting is about to end, Tyler quickly interrupts."
-
-                show tyler kindasad
-
-                b "Sorry, I didn't forget. Something just happened... that prevented me from doing my work..."
-
-                "Something happened? You're quite surprised."
-
-                show tyler hehe
-
-                b "But anyway, see you all tomorrow!"
-
-                hide tyler hehe with moveoutright
-
-                "You hope that Tyler can do his part tonight."
-
-                "Something that happened in his life... what does that mean?"
-
-                "Since everyone is departing for their next class, you quickly do the same."
+            t "Yes, I think it would be helpful to establish clear expectations for everyone in the group, and to make sure that everyone has a say in how the project is completed."
             
-            else:
+            t "It's important to learn how to work with different types of people and to collaborate effectively in order to achieve success."
 
-                show tyler mad
+            t "I believe you all have the potential to do great things together if you work on these skills."
 
-                b "Why do you have to pry on my life so much? Can't you just leave me alone?"
+            me "Thank you for the advice, we will definitely keep that in mind for this!"
 
-                me "Aren't you being a hypocrite? You wouldn't leave Harold alone."
+            show teacher happy
 
-                show tyler bruh
-
-                b "Well that's different..."
-
-                show tyler neutral
-
-                b "Ugh ok fine. I'll do my part."
-
-                show annie happy
-
-                a "Alright guys, let's just do our parts tonight, okay?"
-
-                play sound bell volume 0.8
-
-                "After a shaky meeting, everyone departs for their next class."
-        
-        "Yell at Tyler":
-
-            me "Tyler! You can't be doing this! This is a group project! You need to contribute just like we do!"
-
-            show teacher mad at right with moveinright
-
-            t "Students, please no yelling at your classmates! Remember rule 7 is to stay positive!"
-
-            hide teacher mad with moveoutright
-
-            show tyler bruh
-
-            b "Yea [name]. No yelling at your classmates."
-
-            me "Well you should remember that rule 5 is to take responsibility, which you clearly aren't doing."
-
-            show tyler mad
-
-            b "Clearly, you're not following rule 4, which is to respect others."
-            
-            b "You have no idea what's going on in my life so shut it."
-
-            "Something going on with his life? You're quite dumbfounded."
-
-            "He needs to stop picking on others."
-
-            "Also, did he actually listen to Dr. Shah's rules?"
-
-            show annie embarrassed
-
-            a "Alright guys, let's just do our parts tonight, okay?"
-
-            play sound bell volume 0.8
-
-            "After a shaky meeting, everyone departs for their next class."
-
-    stop music fadeout 1.0
-
-    jump d2bedroom
-
-label d2bedroom:
-
-    scene bedroom with dissolve15
-
-    play music bedroom
-
-    queue sound [opendoor, closedoor]
-
-    "You come back to your room after a long day at school and a tasty dinner."
-
-    "You sit down at your desk, when suddenly you hear your phone buzz."
-
-    n "Hmm, must be a text message, let’s see who it’s from."
-
-    a "yo [name], i just heard some tea about Tyler!! wanna hear?"
-
-    n "Tea about Tyler? Did he get in trouble with the principal again?"
-
-    "Hmmm sounds very tempting, and you wonder what the tea could be."
-
-    "What should you do?"
-
-    menu:
-
-        "What should you do?"
-
-        "Spill the tea":
-
-            $ gossipListen = True
-
-            me "YES fill me in!"
-
-            a "OMG ok"
-
-            a "sooo I heard... that Tyler's dad is having an affair with the principal!!"
-
-            me "WHAT?? are you for real?"
-
-            a "YESSS people in our class were saying they were seeing his dad go into the principal's office multiple times this week!"
-
-            me "omg... that does seem a little suspicious..."
-
-            a "yea for sure! and it makes so much sense..."
-
-            a "...because why do you think Tyler never really got a lot of consequences?"
-
-            a "probably gets the principal's favoritism"
-
-            me "i cant believe it... thats so crazy!"
-
-            a "i know right?? its also probably why Tyler never does his work since he knows he can just get away with it."
-            
-            a "like even today, he legit showed up without doing his part on the research!"
-
-            me "hmmm... im not sure but it could be a possibility?"
-
-            "You put your phone down after reading the gossip Annie shared."
-
-            "That was a lot to take in."
-
-            n "Could everything Annie said be true??"
-
-            "You're quite exhausted and don't want to think about Tyler."
-            
-            "The idea that he might not do any work tonight bothers you."
-
-        "Ignore the gossip":
-
-            me "nah, i think im ok"
-
-            me "its probably just some rumors the other kids are talking about anyway"
-
-            me "ill see you tomorrow in class though!"
-
-            "With that, you place your phone down."
+            t "That's great to hear. I have no doubt that you will continue to improve! Keep up the good work!"
     
-    "Now, time to figure out how you want to spend the rest of your night!"
-
-    menu:
-
-        "Do you want to..."
-
-        "Do more research":
-
-            $ nightAction = "research"
-
-            n "I should probably spend some more time doing my part of the research so that our group is a bit ahead."
-
-            scene computer with pixellate
-
-            "You do some more research on [president]."
-
-            n "Let me check wikipedia again."
-            
-            "The box on the right gives a lot of general information about [president]."
-
-            if president == "Washington":
-
-                menu:
-                    "It says that [president] started his presidency in _."
-
-                    "1777":
-                        $ presidentYear = "1777"
-                    "1781":
-                        $ presidentYear = "1781"
-                    "1789":
-                        $ presidentYear = "1789"
-            
-            elif president == "Lincoln":
-
-                menu:
-                    "It says that [president] started his presidency in _."
-
-                    "1861":
-                        $ presidentYear = "1861"
-                    "1863":
-                        $ presidentYear = "1863"
-                    "1865":
-                        $ presidentYear = "1865"
-
-            elif president == "Hoover":
-
-                menu:
-                    "It says that [president] started his presidency in _."
-
-                    "1921":
-                        $ presidentYear = "1921"
-                    "1929":
-                        $ presidentYear = "1929"
-                    "1933":
-                        $ presidentYear = "1933"
-            
-            n "That's quite a lot of years ago!"
-
-            n "Looks like we'll be a bit ahead of our game!"
-
-        "Play video games":
-
-            $ nightAction = "games"
-
-            scene computer with pixellate
-
-            stop music fadeout 1.0
-
-            "Thinking back on your session on Minecraft yesterday, you decide to give it another go."
-            
-            "That $29 wasn't spent for nothing."
-
-            play music subwoofer
-
-            "As you start up the game again, you are once again greeted by a new world of trees and grasslands."
-
-            play sound mc_walking loop volume 0.7
-
-            "This time, you'll make sure that you don't die to whatever killed you last night."
-
-            "It is still day time, so you devise a plan to gather dirt and wood to build a makeshift house."
-
-            queue sound pig loop volume 0.7
-
-            show pig at left with moveinright
-            hide pig with moveoutleft
-
-            "Every here and there as you're working, you still hear the sounds of animals nearby."
-
-            stop sound
-
-            "As the sun begins to set, you face your dirt and wooden house with accomplishment."
-
-            play sound zombie loop volume 0.7
-
-            "Finally as it is night time, you begin to hear growls and slow creeping of some sort of monster."
-
-            "Luckily, you are in the safety of your home."
-
-            "For now, you decide to remain inside until it is day time."
-
-            "..."
-
-            "..."
-
-            stop sound
-
-            "..."
-
-            n "Looks like the sun is rising. The monsters are slowly dying."
-
-            "You're relieved to have survived a night of Minecraft!"
-
-            "With your first accomplishment, you decide that this is a good time to stop for the night."
-
-            "And with that, you log off Minecraft."
-
-            stop music fadeout 1.0
-    
-    scene bedroom
-    play music bedroom if_changed
-
-    "You feel that you accomplished quite a bit today."
-
-    if gossipListen:
-
-        "You're also quite curious about the gossip that you heard today."
-
-        n "What is really up with Tyler?"
-
-        n "I guess I'll find out tomorrow."
-
     else:
 
-        "You start thinking about what you'll accomplish tomorrow."
+        "Annie goes first presenting Section A on [president]."
+    
+        n "Ok not bad Annie. You said a couple of things that sounded funny but that’s alright."
 
-    "And with that, you quickly drift to sleep."
+        "You go next, presenting Section B. You started off a little shaky, but you ended up pulling through till the end."
 
+        if nightAction1 == "research":
+
+            me "I found that [president] is the [presidentNum] president of America!"
+
+            if nightAction2 == "research":
+                
+                me "I also found that [president] entered office in [presidentYear]!"
+
+        elif nightAction2 == "research":
+
+            me "I found that [president] entered office in [presidentYear]!"
+        
+        "However, when you look at Dr. Shah from across the classroom, she looks quite puzzled."
+        
+        show annie embarrassed
+        show tyler hehe
+
+        "Next, is Tyler’s turn to present Section C."
+
+        "You hold your breath for a moment as he presents."
+
+        "Wait, was he supposed to say that? You realize that he’s trying his best to say what he was supposed to say but it didn’t quite sound like what you all rehearsed."
+
+        "Now you feel really embarrassed. Even Harold is judging you."
+
+        show harold idk at right with moveinright
+        hide harold with moveoutright
+        show tyler embarrassed
+
+        "But regardless of what everyone else thinks, the presentation is finally finished."
+
+        # TODO
+        show teacher sad at right with moveinright
+
+        t "I'm sorry to say that I'm not very impressed with your presentation, group."
+
+        show annie sad
+
+        a "Oh no..."
+
+        if d4action == 3:
+
+            show teacher explain
+
+            t "[name], I can tell you did all the work on this project, but unfortunately, it didn't show in your presentation."
+
+            t "There are many aspects of the project that could be improved."
+
+            me "I understand, Dr. Shah. We'll try to do better next time."
+
+            t "And Tyler, I know you struggled with your part of the project, but I have faith that you'll improve with more practice."
+
+            show tyler hehe
+
+            b "Yeah, I'll try harder next time."
+
+            show teacher happy
+
+            t "Overall, it's clear that your group needs to work on collaborating more effectively and learning how to leverage your strengths and weaknesses to achieve a goal."
+
+        elif d4action == 2:
+
+            show teacher explain
+
+            t "However, as much as I think your presentation could be improved, I’m glad to see how you all worked together to make sure you had finished it."
+
+            t "While being accurate in your facts is one thing, being able to work as a team is another thing. The latter is what will get you far in life."
+
+            show teacher neutral
+
+            me "I understand, Dr. Shah. We'll try to do better next time."
+
+            show teacher explain
+
+            t "And Tyler, I know you struggled with your part of the project, but I have faith that you'll improve with more practice."
+
+            show teacher neutral
+            show tyler hehe
+
+            b "Yeah, I'll try harder next time."
+
+            show teacher happy
+            show tyler smile
+            show annie neutral
+
+            t "Overall, all groups could always use more practice on collaborating more effectively and learning how to leverage your strengths and weaknesses to achieve a goal."
+
+        elif d4action == 1:
+
+            show teacher explain
+
+            t "I can tell that the work completed for this presentation was not distributed evenly. There are many aspects of the project that could be improved."
+
+            show teacher neutral
+
+            me "I understand, Dr. Shah. We'll try to do better next time."
+
+            show teacher explain
+
+            t "And Tyler, I know you struggled with your part of the project, but I have faith that you'll improve with more practice."
+
+            show teacher neutral
+            show tyler hehe
+
+            b "Yeah, I'll try harder next time."
+
+            show teacher happy
+            show tyler smile
+            show annie neutral
+
+            t "Overall, it's clear that your group needs to work on collaborating more effectively and learning how to leverage your strengths and weaknesses to achieve a goal."
+    
+    if tylerPoints >= 3:
+
+        scene hallway with dissolve15
+
+        "After the class, you and Annie just pack up your stuff and wanna get to the next class. Suddenly, Tyler calls you out."
+
+        show annie neutral at slightleft
+        show tyler neutral at slightright with dissolve15
+
+        t "[name] and Annie…"
+        
+        show tyler kindasad
+
+        t "I just really want to say sorry for the way I've been acting in our group."
+
+        t "But.. I've realized something."
+
+        show tyler smile
+
+        t "You guys actually care about me and have been doing a lot to help me out. And I appreciate it, I really do."
+
+        t "So, I'm sorry for being a pain and not pulling my weight."
+
+        t "From now on, I'm gonna work with you all and do better. Thanks for having my back."
+
+        show annie surprised
+
+        a "Oh! Uhh you’re welcome."
+
+        show annie embarrassed
+
+        a "Yeah it’s not like we doubted you or anything ahahah..."
+
+        me "Yeah, no problem man. Just let us know if you need anything! See you tomorrow!"
+
+        scene outside with dissolve15
+
+        "As you begin to leave the school, you see your mom’s car pull up to the pickup zone."
+
+        "You smile to yourself."
+
+        if projectPoints >= 4:
+
+            "Your presentation went well, and you made a new unexpected friend."
+
+            "You are glad because you wonder how things could have turned out poorly if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group."
+
+            "But regardless, this was the best outcome you could have hoped for."
+        
+        else:
+
+            "Although your presentation could have gone better, you made a new unexpected friend."
+
+            "You are glad because you wonder how things could have turned out poorly if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group."
+    
+    else:
+
+        scene outside with dissolve15
+
+        "After school, as you begin to leave the school, you see your mom’s car pull up to the pickup zone."
+
+        if projectPoints >= 4:
+
+            "You smile to yourself."
+
+            "Your presentation went well."
+
+            "However, Tyler didn’t look like a happy camper."
+
+            "You wonder if things would have turned out differently if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group instead."
+
+        else:
+
+            "You are feeling a little dejected."
+
+            "Your presentation didn’t go as well as you had hoped, and Tyler seems to still hate your guts."
+
+            "You wonder if things would have turned out differently if you made different decisions, and a part of you wonders what it would have been like to have Harold in your group instead."
+
+        n "Huh?"
+
+        "You hear running coming up from behind you?"
+
+        "You turn around and see two students shouting and chasing each other."
+
+        n "Oh no."
+
+        "They’re coming your way."
+
+        "You try to maneuver so you dodge them but you’re too slow and one of them collides with you, sending you sprawling to the ground."
+
+        "You’re okay, though you have some scrapes on your hand."
+
+        "However, you realize that your backpack wasn’t zipped all the way and all of its contents spilled out onto the concrete."
+
+        "The two students run off to continue chasing each other, not even apologizing to you."
+
+        "As you quickly try to scoop everything back into the backpack, you see Tyler walk by."
+
+        show tyler neutral with dissolve15
+
+        "You and Tyler make eye contact, and a part of you hopes he stops to help you."
+
+        "After all, you were in a group project together right?"
+
+        show tyler bruh
+
+        "Tyler rolls his eyes, and then leaves you to pick up after yourself without saying a word."
+    
     stop music fadeout 1.0
-    scene black
-    with dissolve2
+
+    scene black with dissolve2
+
+    "Thank you for playing Middle School Journey! If you want to know what would have happened if you picked other dialogue options, then feel free to play again!"
